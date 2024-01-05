@@ -1,7 +1,16 @@
 import React from "react";
+import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
+
+  function handleResponse(response) {
+    console.log(response.data);
+  }
+  let city="New York"
+  const apiKey = "3fdc8cfbf2d6fa0116c9ae92d3df4f79";
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
     return (
       <div className="weather">
         <form>
@@ -30,15 +39,17 @@ export default function Weather() {
         </ul>
         <div className="row mt-3">
           <div className="col-6">
-            <div className="clearfix">
+            <div className="clearfix d-flex align-items-center">
               <img
                 src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png"
                 alt="Mostly Cloudy"
                 className="float-left"
               />
+              <div className="float-left">
                 <span className="temperature">6</span>
                 <span className="unit">⁰C</span>
-          </div>
+              </div>
+            </div>
           </div>
           <div className="col-6">
             <ul>
