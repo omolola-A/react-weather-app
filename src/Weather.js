@@ -10,14 +10,14 @@ export default function Weather(props) {
 
   function handleResponse(response) {
     setweatherData({
-      ready:true,
+      ready: true,
       temperature: response.data.main.temp,
       city: response.data.name,
       wind: response.data.wind.speed,
-      date: new Date(response.data.dt*1000),
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      iconUrl:"https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png",
-      humidity: response.data.main.humidity 
+      iconUrl:  `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      humidity: response.data.main.humidity,
     });
   
   }
