@@ -37,11 +37,9 @@ font-family: Arial, sans-serif;
     line-height: 64px;
 }
 
-.weather img {
-    height: 64px;
+.weather canvas {
     margin-right: 10px;
-    display: inline-block;
-    width: 64px;
+    display: inline-block; 
 }
 
 .weather .unit {
@@ -51,5 +49,4 @@ font-family: Arial, sans-serif;
     position: relative;
     line-height: 1;
     top: -34px;
-    margin-left: 5px;
 }
