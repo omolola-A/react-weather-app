@@ -38,7 +38,6 @@ font-family: Arial, sans-serif;
 }
 
 .weather canvas {
-    margin-right: 10px;
     display: inline-block; 
 }
 
